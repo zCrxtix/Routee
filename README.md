@@ -13,23 +13,23 @@ Routee is an project that I started because I was bored. It's inspired by expres
 ***
 ### Setup app
 ```javascript
-    const routee = require('./path_to_routee');
-    const app = routee();
+const routee = require('./path_to_routee');
+const app = routee();
 ```
 
 ### Start server with PORT
 ```javascript
-    app.start(3000); // Replace 3000 with your PORT
+app.start(3000); // Replace 3000 with your PORT
 ```
 
 ### "Hello World" displayed on "/", while printing the URL
 ```javascript
-    app.listen('/', (res, req) => {
-        res.write("<h1>Hello World</h1");
-        console.log("URL: " + req.url);
-    });
+app.listen('/', (res, req) => {
+    res.write("<h1>Hello World</h1");
+    console.log("URL: " + req.url);
+});
 ```
 ### Format a title (removes special characters, removes repeated whitespace, replaces all whitespace with dashes, lowers string)
 ```javascript
-    app.format_title("My cool page!!!") // my-cool-page
+app.format_title("My cool page!!!") // my-cool-page
 ```
